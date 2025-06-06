@@ -34,6 +34,13 @@ RUN chown -R www-data:www-data /var/www \
 # ✅ ADD THIS LINE to create the SQLite file
 RUN touch /var/www/database/database.sqlite
 
+# Copy your Laravel project files into the image
+COPY . /var/www
+
+# Install Composer dependencies
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader
+
+
 # Expose Laravel dev server port
 EXPOSE 8000
 
