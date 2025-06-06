@@ -31,6 +31,9 @@ COPY . /var/www
 RUN chown -R www-data:www-data /var/www \
     && chmod -R 755 /var/www/storage
 
+# ✅ ADD THIS LINE to create the SQLite file
+RUN touch /var/www/database/database.sqlite
+
 # Expose Laravel dev server port
 EXPOSE 8000
 
