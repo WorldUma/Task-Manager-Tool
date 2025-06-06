@@ -32,7 +32,8 @@ COPY . /var/www
 RUN touch /var/www/database/database.sqlite
 
 # ✅ Install Composer dependencies (after copying files)
-RUN composer install --no-interaction --prefer-dist --optimize-autoloader
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader --verbose
+
 
 # Set folder permissions
 RUN chown -R www-data:www-data /var/www \
