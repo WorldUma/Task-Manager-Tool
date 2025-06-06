@@ -1,7 +1,10 @@
 @extends('layout')
 
 @section('content')
-    <form class="mt-5" method="POST" action="{{ route('tasks.store') }}" enctype="multipart/form-data">
+    <div class="alert alert-primary mt-5">
+        Add Task
+    </div>
+    <form class="mt-10" method="POST" action="{{ route('tasks.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>

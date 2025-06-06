@@ -6,7 +6,9 @@
             {{ session('success') }}
         </div>
     @endif
-
+    <div class="alert alert-primary text-center mt-5">
+        Task Manager Tool
+    </div>
     <div class="container mt-5">
         <a href ="{{ route('tasks.create') }}" class="btn btn-primary">Create Task</a>
     </div>

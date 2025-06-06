@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('content')
+    <div class="alert alert-primary mt-5">
+        Edit Task
+    </div>
     @if (isset($task) && $task)
         <form class="mt-5" method="POST" action="{{ route('tasks.update', $task->id) }}" enctype="multipart/form-data">
             @csrf
