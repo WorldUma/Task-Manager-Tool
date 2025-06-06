@@ -40,7 +40,8 @@ A simple Laravel-based Task Manager application with full CRUD functionality and
 ## 1) Clone the repo
 
 ```git clone https://github.com/WorldUma/Task-Manager-Tool.git````
-cd Task-Manager-Tool
+    
+    cd Task-Manager-Tool
 
 ## 2) Install dependencies
 
