@@ -53,7 +53,11 @@ class TaskController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $task = DB::table('tasks')->find($id);
+
+        if (request()->ajax()) {
+            return response()->json($task);
+        }
     }
 
     /**
