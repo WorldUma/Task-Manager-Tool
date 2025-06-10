@@ -43,8 +43,8 @@ RUN chown -R www-data:www-data /var/www \
 # Expose Laravel dev server port
 EXPOSE 8000
 
-# Run migrations and start Laravel server
-CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000
-
-CMD php artisan storage:link && php-fpm
+# Run migrations, create storage link, and start the Laravel server
+CMD php artisan migrate --force \
+ && php artisan storage:link \
+ && php artisan serve --host=0.0.0.0 --port=8000
 
